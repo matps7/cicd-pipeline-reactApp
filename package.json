@@ -1,0 +1,35 @@
+{
+  "name": "pipeline-react",
+  "version": "0.1.0",
+  "bin": {
+    "pipeline-react": "bin/pipeline-react.js"
+  },
+  "scripts": {
+    "postinstall": "(cd reactwebapp && npm install)",
+    "build": "(cd reactwebapp && npm run build) && tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "lint": "tsc --noEmit && eslint bin lib test  --ext .ts",
+    "format": "prettier --write --ignore-path .gitignore 'bin/**/*.ts' 'lib/**/*.ts' 'test/**/*.ts'"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.5.2",
+    "@types/node": "10.17.27",
+    "@types/prettier": "2.6.0",
+    "aws-cdk": "2.50.0",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.9.1",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-codepipeline": "^1.180.0",
+    "@aws-cdk/aws-route53-targets": "^1.180.0",
+    "@aws-cdk/aws-s3": "^1.180.0",
+    "@aws-cdk/aws-s3-deployment": "^1.180.0",
+    "@aws-cdk/pipelines": "^1.180.0",
+    "aws-cdk-lib": "2.50.0",
+    "constructs": "^10.0.0"
+  }
+}
