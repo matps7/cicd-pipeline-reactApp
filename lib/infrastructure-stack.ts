@@ -39,7 +39,6 @@ export class InfrastuctureStack extends Stack {
     const originAccessIdentity = new cloudfront.OriginAccessIdentity(this, 'OriginAccessIdentity');
     bucket.grantRead(originAccessIdentity);
 
-
     const distribution = new cloudfront.Distribution(this, 'FrontendStaticDistribution', {
       defaultBehavior: {
         origin: new origins.S3Origin(bucket, { originAccessIdentity }),
