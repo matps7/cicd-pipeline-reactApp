@@ -12,10 +12,10 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "cd reactwebapp && react-scripts start",
+    "build": "cd reactwebapp && react-scripts build",
+    "test": "cd reactwebapp && react-scripts test",
+    "eject": "cd reactwebapp && react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
