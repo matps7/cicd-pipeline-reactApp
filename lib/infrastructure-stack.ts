@@ -33,7 +33,7 @@ export class InfrastuctureStack extends Stack {
       encryption: s3.BucketEncryption.S3_MANAGED,
 
       // Couldn't get error page redirection to work with cloudfront.
-      // I think that needs public permissions to work, not just origina access identity permission,
+      // I think that needs public permissions to work, not just original access identity permission,
       // so doing error page redirection in cloudfront instead.
     });
     const originAccessIdentity = new cloudfront.OriginAccessIdentity(this, 'OriginAccessIdentity');
@@ -50,14 +50,14 @@ export class InfrastuctureStack extends Stack {
         'SSLCertificate',
         globalCertArnForHostedZone
       ),
-      defaultRootObject: 'index.html',
+      defaultRootObject: 'build/index.html',
       errorResponses: [
         {
           // redirect 404's to our app's index.html, so routes within our front-end app will work
           // see notes below for ideas for a better solution if google SEO is important
           httpStatus: 404,
           responseHttpStatus: 200,
-          responsePagePath: '/index.html',
+          responsePagePath: 'build/index.html',
         },
       ],
     });
