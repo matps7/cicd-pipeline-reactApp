@@ -31,9 +31,7 @@ export class ReactPipelineStack extends cdk.Stack {
             buildEnvironment: {
               buildImage: cdk.aws_codebuild.LinuxBuildImage.AMAZON_LINUX_2_4,
             }
-        }),
-        
-        codeBuildDefaults: {
+        }),codeBuildDefaults: {
           partialBuildSpec: cdk.aws_codebuild.BuildSpec.fromObject({
             env:{
               'shell':'bash',
@@ -45,14 +43,7 @@ export class ReactPipelineStack extends cdk.Stack {
                     nodejs: "16"
                 }
             }
-        },
-        artifacts: {
-          ['base-directory']: 'reactwebapp/build',
-          files: ['**/*']
-        },
-        cache: {
-          paths: ['reactwebapp/node_modules/**/*']
-      } 
+        }
           })
         }
     });
