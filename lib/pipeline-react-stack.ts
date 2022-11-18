@@ -20,6 +20,7 @@ export class ReactPipelineStack extends cdk.Stack {
               'npm install -g aws-cdk'
             ],
             commands: [
+                'npm install',
                 'npm ci',
                 'npm run build',
                 'npm cdk synth'
