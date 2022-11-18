@@ -16,5 +16,3 @@ new InfrastuctureStack(app, 'InfrastructureStack', {
     region: 'ap-southeast-2',
   }
 });
-
-app.synth();
