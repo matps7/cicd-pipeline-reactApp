@@ -1,6 +1,8 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { CodeBuildStep, CodePipeline, CodePipelineSource } from 'aws-cdk-lib/pipelines';
+import * as s3 from 'aws-cdk-lib/aws-s3';
+
 
 
 export class ReactPipelineStack extends cdk.Stack {
@@ -43,7 +45,5 @@ export class ReactPipelineStack extends cdk.Stack {
           })
       }
     });
-
-
   }
 }
