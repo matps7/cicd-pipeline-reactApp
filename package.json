@@ -5,7 +5,7 @@
     "pipeline-react": "bin/pipeline-react.js"
   },
   "scripts": {
-    "postinstall": "npm install && (cd reactwebapp && npm install)",
+    "postinstall": "(cd reactwebapp && npm install)",
     "build": "(cd reactwebapp && npm run build) && tsc",
     "watch": "tsc -w",
     "test": "jest",
