@@ -18,7 +18,8 @@ export class ReactPipelineStack extends cdk.Stack {
             }),
             commands: [
                 'npm ci',
-                'npm run build'
+                'npm run build',
+                'npm cdk synth'
             ],
             buildEnvironment: {
               buildImage: cdk.aws_codebuild.LinuxBuildImage.AMAZON_LINUX_2_4,
