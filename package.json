@@ -5,10 +5,13 @@
     "pipeline-react": "bin/pipeline-react.js"
   },
   "scripts": {
-      "build": "tsc",
-      "watch": "tsc -w",
-      "test": "jest",
-      "cdk": "cdk"
+    "postinstall": "(cd reactwebapp && npm install)",
+    "build": "tsc && (cd reactwebapp && npm run build)",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "lint": "tsc --noEmit && eslint bin lib test  --ext .ts",
+    "format": "prettier --write --ignore-path .gitignore 'bin/**/*.ts' 'lib/**/*.ts' 'test/**/*.ts'"
   },
   "devDependencies": {
     "@types/jest": "^27.5.2",
