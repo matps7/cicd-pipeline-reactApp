@@ -6,7 +6,7 @@
   },
   "scripts": {
     "postinstall": "(cd reactwebapp && npm install)",
-    "build": "(cd reactwebapp && npm run build) && tsc",
+    "build": "tsc && (cd reactwebapp && npm run build)",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
