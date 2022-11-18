@@ -1,6 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
-import { InfrastuctureStack } from '../lib/infrastructure-stack';
 import { ReactPipelineStack } from '../lib/pipeline-react-stack';
+import { InfrastuctureStack } from '../lib/infrastructure-stack';
 
 const app = new cdk.App();
 
@@ -10,8 +10,7 @@ new ReactPipelineStack(app, 'MyPipelineStack', {
     region: 'ap-southeast-2',
   }
 });
-
-new InfrastuctureStack(app, 'InfrastructureStack', {
+new InfrastuctureStack(app, 'MyPipelineStack', {
   env: {
     account: '991679131068',
     region: 'ap-southeast-2',

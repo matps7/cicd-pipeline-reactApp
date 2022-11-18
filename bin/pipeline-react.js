@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const cdk = require("aws-cdk-lib");
+const pipeline_react_stack_1 = require("../lib/pipeline-react-stack");
+const app = new cdk.App();
+new pipeline_react_stack_1.ReactPipelineStack(app, 'MyPipelineStack', {
+    env: {
+        account: '991679131068',
+        region: 'ap-southeast-2',
+    }
+});
+app.synth();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGlwZWxpbmUtcmVhY3QuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJwaXBlbGluZS1yZWFjdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLG1DQUFtQztBQUNuQyxzRUFBaUU7QUFFakUsTUFBTSxHQUFHLEdBQUcsSUFBSSxHQUFHLENBQUMsR0FBRyxFQUFFLENBQUM7QUFFMUIsSUFBSSx5Q0FBa0IsQ0FBQyxHQUFHLEVBQUUsaUJBQWlCLEVBQUU7SUFDN0MsR0FBRyxFQUFFO1FBQ0gsT0FBTyxFQUFFLGNBQWM7UUFDdkIsTUFBTSxFQUFFLGdCQUFnQjtLQUN6QjtDQUNGLENBQUMsQ0FBQztBQUVILEdBQUcsQ0FBQyxLQUFLLEVBQUUsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIGNkayBmcm9tICdhd3MtY2RrLWxpYic7XHJcbmltcG9ydCB7IFJlYWN0UGlwZWxpbmVTdGFjayB9IGZyb20gJy4uL2xpYi9waXBlbGluZS1yZWFjdC1zdGFjayc7XHJcblxyXG5jb25zdCBhcHAgPSBuZXcgY2RrLkFwcCgpO1xyXG5cclxubmV3IFJlYWN0UGlwZWxpbmVTdGFjayhhcHAsICdNeVBpcGVsaW5lU3RhY2snLCB7XHJcbiAgZW52OiB7XHJcbiAgICBhY2NvdW50OiAnOTkxNjc5MTMxMDY4JyxcclxuICAgIHJlZ2lvbjogJ2FwLXNvdXRoZWFzdC0yJyxcclxuICB9XHJcbn0pO1xyXG5cclxuYXBwLnN5bnRoKCk7Il19

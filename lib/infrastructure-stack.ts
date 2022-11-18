@@ -17,11 +17,11 @@ export class InfrastuctureStack extends Stack {
       removalPolicy: RemovalPolicy.DESTROY, // all objects can be restored from code
       autoDeleteObjects: true,
       encryption: s3.BucketEncryption.S3_MANAGED,
-
       // Couldn't get error page redirection to work with cloudfront.
       // I think that needs public permissions to work, not just original access identity permission,
       // so doing error page redirection in cloudfront instead.
     });
+
     const originAccessIdentity = new cloudfront.OriginAccessIdentity(this, 'OriginAccessIdentity');
     bucket.grantRead(originAccessIdentity);
 
@@ -31,7 +31,6 @@ export class InfrastuctureStack extends Stack {
         viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
       },
       defaultRootObject: 'index.html'
-      
     });
 
     // Frontend code and assets deployment
