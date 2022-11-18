@@ -17,7 +17,6 @@ export class InfrastuctureStack extends Stack {
       removalPolicy: RemovalPolicy.DESTROY, // all objects can be restored from code
       autoDeleteObjects: true,
       encryption: s3.BucketEncryption.S3_MANAGED,
-      publicReadAccess: true
       // Couldn't get error page redirection to work with cloudfront.
       // I think that needs public permissions to work, not just original access identity permission,
       // so doing error page redirection in cloudfront instead.
