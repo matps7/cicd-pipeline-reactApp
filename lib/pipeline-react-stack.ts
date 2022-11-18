@@ -16,6 +16,9 @@ export class ReactPipelineStack extends cdk.Stack {
             input: CodePipelineSource.connection('matps7/cicd-pipeline-reactApp', 'master', {
             connectionArn: 'arn:aws:codestar-connections:ap-southeast-2:991679131068:connection/c64f0002-e4f9-428d-820f-1f8e0cddaad5'
             }),
+            installCommands: [
+              'npm install -g aws-cdk'
+            ],
             commands: [
                 'npm ci',
                 'npm run build',
@@ -39,5 +42,7 @@ export class ReactPipelineStack extends cdk.Stack {
           })
       }
     });
+
+
   }
 }
