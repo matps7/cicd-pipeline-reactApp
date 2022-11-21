@@ -10,9 +10,3 @@ new ReactPipelineStack(app, 'MyPipelineStack', {
     region: 'ap-southeast-2',
   }
 });
-new InfrastuctureStack(app, 'InfrastructureStack', {
-  env: {
-    account: '991679131068',
-    region: 'ap-southeast-2',
-  }
-});
