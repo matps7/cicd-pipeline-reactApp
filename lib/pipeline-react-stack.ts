@@ -15,8 +15,8 @@ export class ReactPipelineStack extends cdk.Stack {
     const pipeline = new CodePipeline(this, 'Pipeline', {
         pipelineName: "MyCDKPipeline",
         synth: new CodeBuildStep('SynthStep', {
-            input: CodePipelineSource.connection('matps7/cicd-pipeline-reactApp', 'master', {
-            connectionArn: 'arn:aws:codestar-connections:ap-southeast-2:991679131068:connection/c64f0002-e4f9-428d-820f-1f8e0cddaad5'
+            input: CodePipelineSource.connection('owner/repo', 'master', {
+            connectionArn: 'secret-arn'
             }),
             installCommands: [
               'npm install -g aws-cdk'
